@@ -8,7 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(RandomGen main.cpp
     random.h random.cpp
     dht.h dht.cpp
-    lcd.h lcd.cpp)
+    lcd.h lcd.cpp
+    mittari.h mittari.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS RandomGen

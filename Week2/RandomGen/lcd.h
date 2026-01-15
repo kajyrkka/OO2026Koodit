@@ -11,7 +11,7 @@ public:
     string floatToString(float);
 
 private:
-    string text;
+    string text="";
 
 };
 

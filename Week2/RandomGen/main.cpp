@@ -1,19 +1,20 @@
 #include <iostream>
-#include "lcd.h"
+#include "mittari.h"
 
 using namespace std;
 
 int main()
 {
 
-    LCD olio;
-    olio.begin();
+    Mittari mittari;
+
+    mittari.setup();
+
 
     for(int i = 0;i<10;i++)
-    {
-        cout<<"Lampotila = ";
-        olio.print("jep");
-        cout<<endl;
+    {       
+        mittari.mittaus();
     }
+
     return 0;
 }
