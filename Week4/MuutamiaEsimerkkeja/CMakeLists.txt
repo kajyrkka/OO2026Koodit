@@ -1,17 +1,16 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(TunnillaKoodattuEsimerkki LANGUAGES CXX)
+project(MuutamiaEsimerkkeja LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(TunnillaKoodattuEsimerkki main.cpp
-    father.h father.cpp
-    son.h son.cpp
-    sonson.h sonson.cpp)
+add_executable(MuutamiaEsimerkkeja main.cpp
+    baseclass.h baseclass.cpp
+    derivedclass.h derivedclass.cpp)
 
 include(GNUInstallDirs)
-install(TARGETS TunnillaKoodattuEsimerkki
+install(TARGETS MuutamiaEsimerkkeja
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )

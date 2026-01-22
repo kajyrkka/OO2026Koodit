@@ -1,15 +1,18 @@
-#include <iostream>
-#include "father.h"
-#include "son.h"
+//#include <iostream>
+//#include "father.h"
+//#include "son.h"
+#include "sonson.h"
 using namespace std;
 
 int main()
 {
 
-    Son poika("Teppo","Matti");
-    poika.printFatherName();
+    SonSon poika("PojanPoika","Teppo","Matti");
+    //poika.printFatherName();
     poika.printEducation();
-    poika.Father::printEducation();
+    poika.Son::printEducation();
+    poika.Son::Father::printEducation();
+
 
 
     return 0;
