@@ -17,6 +17,6 @@ void BaseClass::test()
 }
 void BaseClass::staattinenTest()
 {
-    cout<<"Base Staattinen funktio ei saa kayttaa luokan ei staattisia muuttujia!!"<<endl;
+    cout<<"Base Staattinen funktio ei saa kayttaa luokan ei dynaamisia muuttujia!!"<<endl;
     cout<<"staattinen lukumaara = "<<lukumaara++<<endl;
 }

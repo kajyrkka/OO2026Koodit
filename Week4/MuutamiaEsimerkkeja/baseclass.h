@@ -5,7 +5,7 @@ class BaseClass
 {
 public:
     BaseClass();
-    ~BaseClass();
+    virtual ~BaseClass();
     static void staattinenTest();
     virtual void test();
     inline static int lukumaara = 0;

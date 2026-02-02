@@ -2,16 +2,16 @@
 #define DHT_H
 #include "random.h"
 
-class DHT
+class DHT : public Random
 {
 public:
-    void begin();
+    void beginDHT();
     float readTemperature();
 
 
 private:
     float temperature;
-    Random gen;
+    //Random gen; ei tarvita enää koosteyhteyttä
 };
 
 #endif // DHT_H

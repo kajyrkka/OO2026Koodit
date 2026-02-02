@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void LCD::begin()
+void LCD::beginLCD()
 {
     cout << "LDC begin"<< endl;
     text = "LCD alustettu";

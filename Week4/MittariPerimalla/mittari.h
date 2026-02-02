@@ -4,7 +4,7 @@
 #include "dht.h"
 
 
-class Mittari
+class Mittari : public DHT,LCD
 {
 public:
     void mittaus();
@@ -12,8 +12,8 @@ public:
 
 private:
     int varoitusvalo;
-    LCD lcdolio;
-    DHT dhtolio;
+    //LCD lcdolio;
+    //DHT dhtolio;
 
 };
 

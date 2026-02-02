@@ -12,8 +12,8 @@ public:
     void setup();
 private:
     int varoitusvalo;
-    // DHT luokka otetaan muuttujana = oliona tämän luokan sisälle
-    // LCD luokka pointterina LCD olioon.
+    DHT dht;       // toinen luokka tämän mittariluokan sisällä muuttujana
+    LCD * lcdPtr;
 };
 
 #endif // MITTARI_H

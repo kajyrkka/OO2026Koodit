@@ -2,27 +2,32 @@
 #include <iostream>
 using namespace std;
 
-Mittari::Mittari() {
+Mittari::Mittari()
+{
     // mitä tänne tulee???
+    lcdPtr = new LCD;
 }
 
 
 Mittari::~Mittari() {
     // mitä tänne tulee???
+    delete lcdPtr;
+    //lcdPtr = nullptr;
+
 }
 
 void Mittari::mittaus()
 {
 
-    float temp =readTemperature();
-    string s = floatToString(temp);
-    print(s);
+    float temp =dht.readTemperature();
+    string s = lcdPtr->floatToString(temp);
+    lcdPtr->print(s);
 }
 
 void Mittari::setup()
 {
     cout << "mittari setup funktio"<<endl;
-    beginDHT();
-    beginLCD();
+    dht.begin();
+    lcdPtr->begin();
 
 }

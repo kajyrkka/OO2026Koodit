@@ -5,16 +5,16 @@ using namespace std;
 
 
 
-void DHT::begin()
+void DHT::beginDHT()
 {
     cout<<"DHT, begin()"<<endl;
-    gen.setSeed(time(0));
+    setSeed(time(0));
     cout<<"gen alustettu "<<endl;
 }
 
 float DHT::readTemperature()
 {
-    long long temp = gen.rand();
+    long long temp = rand();
     temp = (temp%20) + 10;
     temperature = temp;
     return (float)temp;

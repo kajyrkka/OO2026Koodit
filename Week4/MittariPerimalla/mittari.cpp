@@ -5,15 +5,15 @@ using namespace std;
 
 void Mittari::mittaus()
 {
-    float temp = dhtolio.readTemperature();
-    string s = lcdolio.floatToString(temp);
-    lcdolio.print(s);
+    float temp = readTemperature();
+    string s = floatToString(temp);
+    print(s);
 }
 
 void Mittari::setup()
 {
     cout << "mittari setup funktio"<<endl;
-    dhtolio.begin();
-    lcdolio.begin();
+    beginDHT();
+    beginLCD();
 
 }

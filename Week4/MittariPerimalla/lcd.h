@@ -6,7 +6,7 @@ using namespace std;
 class LCD
 {
 public:
-    void begin();
+    void beginLCD();
     void print(string);
     string floatToString(float);
 

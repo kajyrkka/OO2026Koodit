@@ -6,7 +6,9 @@ using namespace std;
 int main()
 {
 
-    BaseClass *basePtr = new BaseClass;
+    BaseClass * basePtr = new BaseClass;  // allokoidaan muistia BaseClass luokan tarvitsema määrä
+                                          // ja kutsutaan BaseClass luokan konstruktoria.
+                                          // luotiin olio keosta = heap
     DerivedClass * derivedPtr = new DerivedClass;
 
     cout<< endl;
@@ -17,9 +19,16 @@ int main()
     delete ptr;
     cout<< endl;
     cout<<endl;
-    delete basePtr;
+    delete basePtr;   // vapauttaa muistin ja kutsuu destructoria.
     cout<< endl;
     cout<<endl;
+
+    BaseClass olio;
+    olio.staattinenTest();
+    basePtr->staattinenTest();
+
+
+
     BaseClass::staattinenTest(); //HOX kutsuttiin luokan metodia tekemättä olioa
     BaseClass::staattinenTest();
     BaseClass::staattinenTest();
@@ -28,4 +37,5 @@ int main()
 
 
     return 0;
+
 }
