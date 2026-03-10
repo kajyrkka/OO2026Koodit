@@ -1,6 +1,7 @@
 #include "worker.h"
 #include <QFile>
 #include <QThread>
+#include <QDebug>
 
 
 
@@ -26,6 +27,7 @@ void Worker::processFile(QString path)
             emit errorFound(QString(line));
 
         emit progress((processed * 100) / totalSize);
+        qDebug()<<"WORKER THREAD number"<<QThread::currentThreadId();
     }
 
     emit finished(lineCount);

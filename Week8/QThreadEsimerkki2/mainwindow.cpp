@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -45,6 +46,7 @@ MainWindow::MainWindow(QWidget *parent)
 
         ui->lineEdit->setText("Nappia painettu "+QString::number(count)+" kertaa");
         count++;
+        qDebug()<<"MAINTHREAD number"<<QThread::currentThreadId();
     });
 
     pQThread->start();

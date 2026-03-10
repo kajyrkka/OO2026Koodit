@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect(ui->Nappi1,&QPushButton::clicked,
             this,&MainWindow::handleNappiClick);
+
+
     connect(ui->Nappi2,&QPushButton::clicked,
             this,&MainWindow::handleNappiClick);
     connect(ui->Nappi1,&QPushButton::clicked,this,[this](){
@@ -30,6 +32,7 @@ void MainWindow::handleNappiClick()
     if (auto button = qobject_cast<QPushButton*>(sender())) {
         qDebug() << "Painike:" << button->text();
     }
+
 }
 
 void MainWindow::handleNapit(QPushButton * ptr)

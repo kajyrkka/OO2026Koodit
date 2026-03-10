@@ -1,8 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "card.h"
+#include "pin.h"
 #include <QMainWindow>
-#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,10 +23,19 @@ private slots:
     void handleClick();
 
 public slots:
-    void buttonClick();
-    void handleNapit(QPushButton *);
+    void handleCard(QString);
+    void handlePin(QString);
+    void handleTimeOut();
+
 
 private:
     Ui::MainWindow *ui;
+    CARD * pCard = nullptr;
+    PIN * pPin = nullptr;
+    int cardNumber;
+    int pinNumber;
+    int correctCardNumber = 1234;
+    int correctPinNumber = 1111;
+    int attemptsLeft = 3;
 };
 #endif // MAINWINDOW_H

@@ -18,11 +18,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+
 public slots:
+
     void handleNappiClick();
     void handleNapit(QPushButton *);
-
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow * ui;
 };
 #endif // MAINWINDOW_H
